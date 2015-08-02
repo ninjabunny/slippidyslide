@@ -1,0 +1,17 @@
+span {
+	/*height: 100%;*/
+/*	white-space: nowrap;
+	border: 10px solid black;
+	overflow: hidden;
+	font-size: 500px;
+	line-height: 500px;
+	vertical-align: top;
+	position: relative;
+*/	/*padding*/
+	/*font-size: 160px;*/
+}
+
+.container {
+	border: 1px solid black;
+	white-space: nowrap;
+}
