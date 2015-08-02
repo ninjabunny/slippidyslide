@@ -1,9 +1,9 @@
 $(document).ready(function(){ 
 	function resize(){
 		$('#theInput').
-			css("font-size", Math.max(document.documentElement.clientHeight, window.innerHeight || 0) + "px");
+			css("font-size", $(window).height() + "px");
 		$('#theInput').
-			css("line-height", Math.max(document.documentElement.clientHeight, window.innerHeight || 0) + "px");
+			css("line-height", $(window).height() + "px");
 	}	
 
 
