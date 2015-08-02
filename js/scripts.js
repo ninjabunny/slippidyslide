@@ -1,20 +1,16 @@
-// document.getElementById("container").style.height = 
-// 	Math.max(document.documentElement.clientHeight, window.innerHeight || 0) + "px";
-function f(){
-	document.getElementById("theInput").style.fontSize = 
-		Math.max(document.documentElement.clientHeight, window.innerHeight || 0) * 1.7 + "px";
-	document.getElementById("theInput").style.lineHeight = 
-		Math.max(document.documentElement.clientHeight, window.innerHeight || 0) + "px";	
-
-}
-f();
+$(document).ready(function(){ 
+	function resize(){
+		$('#theInput').
+			css("font-size", Math.max(document.documentElement.clientHeight, window.innerHeight || 0) + "px");
+		$('#theInput').
+			css("line-height", Math.max(document.documentElement.clientHeight, window.innerHeight || 0) + "px");
+	}	
 
 
-$(document).ready(function(){
-	// $('#theInput').text("  " + $('#theInput').text());  
-	$(window).on("orientationchange",function(){
-	  alert("The orientation has changed!");
-	  f();
+	$(window).resize(function(){
+	  console.log("The orientation has changed!");
+	  resize();
 	});
+	resize();
 });
 
