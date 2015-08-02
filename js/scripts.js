@@ -1,16 +1,15 @@
+
+function resize(){
+	$('#theInput').
+		css("font-size", Math.max(document.documentElement.clientHeight, window.innerHeight || 0) * 0.90 + "px");
+	$('#theInput').
+		css("line-height", Math.max(document.documentElement.clientHeight, window.innerHeight || 0) + "px");
+}	
+resize();
+
 $(document).ready(function(){ 
-	function resize(){
-		$('#theInput').
-			css("font-size", $(window).height() * 0.9 + "px");
-		$('#theInput').
-			css("line-height", $(window).height() * 0.9 + "px");
-	}	
-
-
 	$(window).resize(function(){
-	  console.log("The orientation has changed!");
 	  resize();
 	});
-	resize();
 });
 
